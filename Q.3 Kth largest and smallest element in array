@@ -1,0 +1,23 @@
+#include <algorithm>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter number of elements for an array"<<endl;
+    cin>>n;
+    int a[n],i;
+    cout<<"Enter elements for an array"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    sort(a,a+n);
+    int k;
+    cout<<"Enter which largest and smallest element you want to find"<<endl;
+    cin>>k;
+    cout<<k<<"th smallest element in array is "<<a[k-1]<<endl;
+    cout<<k<<"th largest element in array is "<<a[n-k]<<endl;
+    return 0;
+}
